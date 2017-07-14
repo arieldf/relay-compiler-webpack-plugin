@@ -70,7 +70,7 @@ class RelayCompilerWebpackPlugin {
 
         await runner.compileAll()
       } catch (error) {
-        compilation.errors.push(error)
+        callback(error);
       } finally {
         callback()
       }

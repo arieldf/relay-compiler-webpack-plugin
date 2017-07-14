@@ -83,7 +83,7 @@ class RelayCompilerWebpackPlugin {
 
           yield runner.compileAll();
         } catch (error) {
-          compilation.errors.push(error);
+          callback(error);
         } finally {
           callback();
         }
