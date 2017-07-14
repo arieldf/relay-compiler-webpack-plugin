@@ -64,7 +64,7 @@ class RelayCompilerWebpackPlugin {
     this.parserConfigs.default.baseDir = options.src;
     this.parserConfigs.default.schema = options.schema;
     this.parserConfigs.default.getSchema = () => (0, _getSchema2.default)(options.schema);
-
+    this.parserConfigs.default.getParser = _relayCompiler.FileIRParser.getParser(options.transform);
     this.writerConfigs.default.getWriter = (0, _getWriter2.default)(options.src);
   }
 
